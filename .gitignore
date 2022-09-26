@@ -2,6 +2,8 @@
 *.pot
 *.pyc
 __pycache__
+__init__
 .env
+env
 settings.py
 migrations
