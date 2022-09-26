@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div id="inicio"> <!-- Definindo apresentação do Site -->
+    <p>Olá! Eu sou Alexandre D.</p>
+    <p>Desenvolvedor <span style="color: #6918B4;">Front-End</span> e <span style="color: #6918B4;">Back-End</span></p>
+</div>
+<div id="django">
+    <div class="texto">
+        <p>Desenvolvedor <span style="color: #102c1c">Django</span></p>
+        <p>Django é um framework web <span style="color: #284cdc">Py</span><span style="color: #ecdc1c">thon</span> de alto nível que encoraja o desenvolvimento rápido e design limpo e pragmático.</p>
+        <p>Inclusive, o próprio site que está acessando agora foi feito através do Django.</p>
+        <p>Além disso, possuo conhecimento em desenvolvimento <span style="color: #f8c464">Front-End</span>, dominindo linguagens como 
+            <span style="color: #e04c24">HTML</span>, 
+            <span style="color: #284cdc">CSS</span> e 
+            <span style="color: #ecdc1c">JavaScript</span>.</p>
+        <div class="iconsImage">
+            <img src="{% static 'icons/html.svg' %}" alt="">
+            <img src="{% static 'icons/css.svg' %}" alt="">
+            <img src="{% static 'icons/js.svg' %}" alt="">
+            <img src="{% static 'icons/python.svg' %}" alt="">
+        </div>
+    </div>
+    <div class="django-imagem">
+        <img src="{% static 'icons/django.svg' %}" alt="">
+    </div>
+</div>
+
+<div id="certificados">
+    <img src="{% static 'icons/certificados/Python_-_Basico_to_advanced_.jpg' %}" class="janelaCertificado"></img>
+    <img src="{% static 'icons/certificados/Python_110Horas.jpg' %}" class="janelaCertificado"></img>
+    <img src="{% static 'icons/certificados/Python_e_Django-_Essencial.jpg' %}" class="janelaCertificado"></img>
+</div>
+
+<div id="projetosDestaques">
+    <div class="texto">
+        <p>Projetos Destaques</p>
+        <p>Aqui estão os principais projetos que já trabalhei</p>
+        <h1>- EM BREVE -</h1>
+    </div>
+ </div>
+</div>
+
+
+
+
+
+<div id="contato">
+    <p>CONTATO</p>
+    <div class="mensagem">
+        <form id="contato-form" action="{% url 'Index' %}" method="post" autocomplete="off">
+            {% csrf_token %}
+            <h4>NOME</h4>
+            <input type="text" class="inputName" maxlength="256" name="nome" placeholder="" autocomplete="off">
+            <h4>EMAIL</h4>
+            <input type="email" class="inputEmail" maxlength="256" name="email"  placeholder="" required="" autocomplete="off">
+            <h4>MENSAGEM</h4>
+            <textarea class="inputText" maxlength="5000" name='mensagem'placeholder="Example text" style="height: 300px;" autocomplete="off"></textarea>
+            <input type="submit" value="Submit" style="height: 60px;" name="submit">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

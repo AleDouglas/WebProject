@@ -1,0 +1,298 @@
+/* CSS RESPONSÁVEL PELA PÁGINA INCIAL */
+
+#inicio{
+    width: 100%;
+    height: 600px;
+    background-color: var(--color-backgroundPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio p{
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+#inicio p:nth-child(1){
+    font-size: 64px;
+}
+#inicio p:nth-child(2){
+    font-size: 24px;
+}
+
+
+/* DJANGO ÁREA */
+#django{
+    margin-top: 90px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#django .texto{
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#django .texto p{
+    letter-spacing: 3px;
+}
+#django .texto p:nth-child(1){
+    font-size: 64px;
+}
+#django .texto p:nth-child(n+2){
+    font-size: 24px;
+}
+
+.django-imagem{
+    display: flex;
+    border: 1px none #000;
+    border-top-left-radius: 25vw;
+    border-bottom-left-radius: 25vw;
+    width: 75%;
+    height: 450px;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.iconsImage{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iconsImage img{
+    transition: all 0.5s ease 0s;
+}
+
+.iconsImage img:hover{
+    perspective: none;
+    transform: scale(1.3);
+}
+
+#certificados{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.janelaCertificado{
+
+    width: 350px;
+    height: 225px;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+    margin-top: 10px;
+    border-radius: 20px;
+    transition: all 0.5s ease 0s;
+}
+.janelaCertificado:hover{
+    perspective: none;
+    transform: scale(1.3);
+}
+
+/* PROJETOS ÁREA */
+#projetosDestaques{
+    margin-top: 90px
+}
+
+#projetosDestaques .texto{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#projetosDestaques .texto p{
+    letter-spacing: 3px;
+}
+#projetosDestaques .texto p:nth-child(1){
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+}
+#projetosDestaques .texto p:nth-child(2){
+    font-size: 24px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+#projetosDestaques .texto h1{
+    margin-top: 50px
+}
+
+
+/* CONTATO */
+#contato{
+    margin-top: 150px;
+    width: 100%;
+    background-color: var(--color-backgroundPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#contato p{
+    text-align: center;
+    letter-spacing: 3px;
+}
+#contato p:nth-child(1){
+    margin-top: 75px;
+    font-size: 64px;
+}
+
+#contato .mensagem {
+    width: 400px;
+    max-width: 100%;
+    margin-bottom: 75px;
+}
+#contato .mensagem h4{
+    margin-top: 5px;
+    letter-spacing: 3px;
+}
+
+#contato .mensagem input{
+    margin-top: 10px;
+    border: 2px solid hsla(0, 0%, 100%, 0.06);
+    background-color: #1f1f1f;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+}
+#contato .mensagem input:focus{
+    border: 2px solid #80f;
+    background-color: #0e0f13;
+}
+
+#contato .mensagem textarea{
+    margin-top: 10px;
+    border: 2px solid hsla(0, 0%, 100%, 0.06);
+    background-color: #1f1f1f;
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+    height: 100%;
+    padding: 15px;
+
+}
+#contato .mensagem textarea:focus{
+    border: 2px solid #80f;
+    background-color: #0e0f13;
+}
+/* RODAPÉ */
+
+#rodape{
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#rodape .texto{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#rodape .texto p{
+    letter-spacing: 3px;
+}
+#rodape .texto p:nth-child(1){
+    font-size: 24px;
+}
+#rodape .texto p:nth-child(n+2){
+    font-size: 14px;
+}
+
+.rodapeSociais{
+    display: flex;
+    width: 50%;
+    height: 300px;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.rodapeSociais .sociais{
+    padding-right: 35px;
+    display: flex;
+    margin-bottom: 15px;
+}
+.rodapeSociais .sociais a{
+    padding: 10px;
+}
+.rodapeSociais p{
+    margin-top: 15px;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+/* DEFININDO RESPONSIVIDADE DA PÁGINA */
+
+@media only screen and (max-width: 1070px){
+    #django{
+        flex-direction: column;
+        height: 100%;
+    }
+    .django-imagem{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 810px){
+    #django .texto{
+        margin: 0;
+        align-items: center;
+    }
+    #django .texto p{
+        text-align: center;
+    }
+    .django-imagem{
+        height: 330px;
+        position: fixed;
+        opacity: 0;
+    }
+    #django .texto p:nth-child(1){
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    #django .texto p:nth-child(n+2){
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+
+    #rodape{
+        flex-direction: column;
+    }
+    #rodape .texto{
+        align-items: center;
+    }
+
+    #rodape .sociais{
+        padding-right: 0;
+        align-self: center;
+    }
+    .rodapeSociais p{
+        align-self: center;
+    }
+
+}

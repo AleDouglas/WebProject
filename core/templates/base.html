@@ -1,0 +1,78 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre D.</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}"> <!-- Onde ficam alterações Globais da página -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}"> <!-- Responsável pela Barra de Navegação -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"> <!-- Responsável pela página Home  -->
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header>
+        <!-- Conteúdo da Barra de Navegação -->    
+        <a href="#1" class="toggle" onclick="toggleButton()">
+            <img src="{% static 'icons/toggle.svg' %}" alt="Toggle" class="toggleSVG">
+            <div id="toggleText">
+                <div class="togglePosition">
+                    <p>MENU</p>
+                    <p>FECHAR</p>
+                </div>
+            </div>
+        </a>
+        <a href="#1"><img src="{% static 'icons/logos/mylogoTransparent.png' %}" alt="" style="width: 98px;height: 98px;"></a>
+        <div class="sociais">
+            <a href=""><img src="{% static 'icons/instagram.svg' %}" alt=""></a>
+            <a href=""><img src="{% static 'icons/twitter.svg' %}" alt=""></a>
+            <a href=""><img src="{% static 'icons/github.svg' %}" alt=""></a>
+        </div>
+        <!-- Fim do conteúdo da Barra de Navegação-->
+    </header>
+
+    <!-- MENU -->
+    <div class="menu" hidden>
+        <div class="links">
+            <a href="#1">HOME</a>
+            <a href="#1">SOBRE MIM</a>
+            <a href="#1">PROJETOS</a>
+            <a href="#1">CONTATO</a>
+        </div>
+    </div>
+    <!-- End NavBar -->
+
+    <!-- Conteúdo -->
+    <section id="conteudo">
+
+
+        {% block content %} {% endblock %}
+        <div id="rodape">
+            <div class="texto">
+                <p>Alexandre D.</p>
+                <p>Desenvolvedor <span style="color: #6918B4;">Front-End</span> e <span style="color: #6918B4;">Back-End</span></p>
+                <p>Brasil, Aracaju/Sergipe</p>
+            </div>
+            <div class="rodapeSociais">
+                <div class="sociais">
+                    <a href=""><img src="{% static 'icons/instagram.svg' %}" alt=""></a>
+                    <a href=""><img src="{% static 'icons/twitter.svg' %}" alt=""></a>
+                    <a href=""><img src="{% static 'icons/github.svg' %}" alt=""></a>
+                </div>
+                <p>alexandredweb@gmail.com</p>
+                <p>(79) 99983-8702</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fim do Conteúdo -->
+    <!-- JavaScript -->
+    <script src="{% static 'js/toggle.js' %}"></script>
+</body>
+</html>
