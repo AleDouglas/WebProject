@@ -1,0 +1,108 @@
+#inicio-blog{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background-color: var(--color-backgroundPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio-blog p{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+#inicio-blog p:nth-child(1){
+    font-size: 64px;
+}
+
+
+#blog-post{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.janelaBlog{
+    background-color: #1d1e24;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    width: 500px;
+    height: 475px;
+    margin-left: 14.5px;
+    margin-right: 14.5px;
+    margin-top: 10px;
+    transition: all 0.5s ease 0s;
+}
+
+.thumbnailField{
+    width: 100%;
+    height: 50%;
+    border: 2px solid black;
+    transition: all 0.5s ease 0s;
+    box-shadow: 2px 2px 16px 8px #000;
+}
+.thumbnailField:hover{
+    opacity: 0.5;
+}
+.aboutPost{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutPost p{
+    font-family: 'Bebas Neue', cursive !important;
+}
+.aboutPost p:nth-child(1){
+    letter-spacing: 5px !important; 
+    font-size: 54px!important;
+}
+
+.aboutPost p:nth-child(2){
+    font-size: 24px !important;
+}
+
+
+/* DETALHES DO BLOG */
+#post-blog{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background-color: var(--color-backgroundPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog-image{
+    box-shadow: 2px 2px 16px 8px #000;
+    width: auto;
+    height: 400px;
+    margin-bottom: 15px;
+
+}
+
+.blog-title{
+    font-size: 64px;
+}
+
+.blog-subtitle{
+    font-size: 14px;
+
+}
+
+.blog-text{
+    margin-top: 25px;
+    text-align: -webkit-center;
+    width: 100%;
+    
+}
+
+.blog-text p{
+    font-size: 18px;
+}

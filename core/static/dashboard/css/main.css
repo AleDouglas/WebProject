@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap'); /* font-family: 'Josefin Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* font-family: 'Lobster', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /* font-family: 'Bebas Neue', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); /* font-family: 'Dancing Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap'); /* font-family: 'Cormorant SC', serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* Paleta de Cores */
+    --color-backgroundNavBar: #2E4159;
+    --color-backgroundDark: #262626;
+
+    --color-letras: white;
+
+    --color-primaria: #4F4D8C;
+    --color-secundaria: #5F5DA6;
+    --color-terciaria: #8F8EBF;
+
+    /*Botões*/
+
+    /* Cores do fundo da página */
+}
+
+body{
+    background-color: var(--color-backgroundDark);
+    color: var(--color-letras);
+}
+
+#conteudo{
+    margin-left: 115px; /* Definindo espaço da barra de navegação lateral para o conteúdo geral da página */
+    transition: all 0.8s ease;
+
+}
+
+.toggleConteudo.ativado{
+    transition: all 0.8s ease;
+    margin-left: 250px !important;
+}

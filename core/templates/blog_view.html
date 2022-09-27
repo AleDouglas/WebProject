@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"> <!-- Responsável pela página BLOG POST  -->
+
+<div id="inicio-blog"> <!-- Definindo apresentação do Site -->
+    <p>Uns pensamentos aí...</p>
+    <div id="blog-post">
+        {% for post in object_list %}
+        <div class="janelaBlog">
+            <a href="{% url 'post_detail' post.pk %}"><img src="{{ post.thumbnail.url }}" alt="" class="thumbnailField"></a>
+            <div class="aboutPost">
+                <p>{{ post.title }}</p>
+                <p>{{ post.description }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}

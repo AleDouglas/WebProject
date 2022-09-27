@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load blog_extras %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}"> <!-- Responsável pela página BLOG POST  -->
+
+<div id="post-blog"> <!-- Definindo apresentação do Site -->
+    <img src="{{ post_individual.thumbnail.url }}" alt="" class="blog-image">
+    <p class="blog-title">{{ post_individual.title }}</p>
+    <p class="blog-subtitle">{{ post_individual.description }}</p>
+    <hr style="width: 100%;color: black;margin-top: 25px;">
+    <div class="blog-text">
+    {{ post_individual.text|convert_markdown|safe }}
+    </div>
+</div>
+
+{% endblock %}

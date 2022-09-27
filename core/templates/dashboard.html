@@ -1,0 +1,61 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre D.</title>
+    <!-- Import -->
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/main.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/navbar.css' %}"> <!-- Responsável pela Barra de Navegação Lateral -->
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/container.css' %}"> <!-- Responsável pela Barra de Navegação Lateral -->
+    <link rel="stylesheet" type="text/css" href="{% static 'dashboard/css/pdtDestaques.css' %}"> <!-- Responsável pela Barra de Navegação Lateral -->
+
+
+    <!-- -->
+</head>
+<body>
+    <!-- NavBar -->
+    <header>
+        <!-- Conteúdo da Barra de Navegação -->      
+        <ul>
+            <li><a onclick="toggleButton()" style="cursor: pointer;"><img src="{% static 'dashboard/icons/toggle.svg' %}" alt=""></a></li>
+            <li><a href="\"><img src="{% static 'dashboard/icons/home.svg' %}" alt=""><p class="menuButton">INICIO</p></a></li>
+            <li><a href=""><img src="{% static 'dashboard/icons/projeto.svg' %}" alt=""><p class="menuButton">EM BREVE</p></a></li>
+            <li><a href=""><img src="{% static 'dashboard/icons/certificado.svg' %}" alt=""><p class="menuButton">EM BREVE</p></a></li>
+            <li><a href=""><img src="{% static 'dashboard/icons/contato.svg' %}" alt=""><p class="menuButton">EM BREVE</p></a></li>
+        </ul>
+        <!-- Fim do conteúdo da Barra de Navegação-->
+    </header>
+    <!-- End NavBar -->
+
+
+    <!-- Conteudo -->
+    <section id="conteudo" class="toggleConteudo">
+        <section id="ProdutosDestaques">
+            <div id="curve_chartA" class="graficoPdtDestaques"></div>
+            <div id="curve_chartB" class="graficoPdtDestaques"></div>
+            <div id="curve_chartC" class="graficoPdtDestaques"></div>
+            <div id="curve_chartD" class="graficoPdtDestaques"></div>
+        </section>
+        <section id="GraficoFaturamentoGeral">
+            <div id="area_chartA" class="graficoGeral"></div>
+            <div id="Regiao_chartA" class="graficoGeral"></div>
+        </section>
+        <section id="GraficoFaturalmenteLojas">
+            
+        </section>
+    </section>
+    <!-- End Conteudo-->
+
+    <!-- JavaScript -->
+    <script src="{% static 'dashboard/js/toggle.js' %}"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="{% static 'dashboard/js/charts.js' %}"></script>
+</body>
+</html>

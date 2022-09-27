@@ -1,12 +1,13 @@
 import gc
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView
+#Import VIEWS
+from django.views.generic import TemplateView, FormView, ListView, DetailView
 # Create your views here.
-from .forms import ContatoForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 
-
+from .models import Post
+from .forms import ContatoForm
 
 class IndexView(FormView):
     template_name = 'index.html'
@@ -27,3 +28,17 @@ class IndexView(FormView):
     def form_invalid(self, form, *args, **kwargs):
         messages.error(self.request, 'Erro ao enviar e-mail')
         return super(IndexView, self).form_invalid(form, *args, **kwargs)
+
+
+class DashboardView(TemplateView):
+    template_name = 'dashboard.html'
+
+class BlogView(ListView):
+    model = Post
+    template_name = 'blog_view.html'
+
+class BlogDetailView(DetailView):
+    model = Post
+    template_name = 'blogdetail_view.html'
+    context_object_name = 'post_individual'
+    

@@ -1,0 +1,53 @@
+/* Definindo posição da Barra de Navegação */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background-color:var(--color-backgroundNavBar);
+    z-index: 100;
+    transition: all 1.3s ease; /* Para efeito de animação ao expandir */
+    font-family: 'Cormorant SC', serif;
+}
+
+header ul{
+    list-style: none;
+    overflow: hidden;
+}
+
+header ul li a{
+    padding: 19.5px; /* Corresponde a 25% do tamanho inicial da barra de navegação ( 78px )*/
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+header .menuButton{
+    margin-left: 20px;
+    opacity: 0;
+    transition: all 0.8s ease;
+    letter-spacing: 2px;
+}
+
+
+
+/* Definindo efeitos :hover */
+
+header ul li a:hover{
+    background-color: var(--color-primaria);
+    transition: all 0.8s ease;
+}
+
+
+
+/* Definindo efeitos da barra expandida */
+
+header.ativado{
+    width: 250px;
+}
+header.ativado .menuButton{
+    opacity: 1;
+}

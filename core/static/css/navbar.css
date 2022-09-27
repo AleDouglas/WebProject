@@ -20,6 +20,7 @@ header a p{
     letter-spacing: 3px;
 }
 .toggle{
+    cursor: pointer;
     padding-left: 35px;
     display: flex;
     flex-direction: row;
