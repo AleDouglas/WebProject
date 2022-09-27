@@ -10,12 +10,6 @@
 
 __pycache__
 
-settings.py
+gitignoreforHEROKU
 
-.migrations
-
-migrations
-
-gitignoreforHEROKU.txt
-
-gitignoreforGITHUB.txt
+gitignoreforGITHUB
