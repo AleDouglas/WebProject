@@ -10,7 +10,7 @@
 }
 
 #inicio-blog p{
-    font-family: 'Dancing Script', cursive;
+
     text-align: center;
     letter-spacing: 3px;
 }
@@ -105,4 +105,46 @@
 
 .blog-text p{
     font-size: 18px;
+}
+
+
+
+
+/* RESPONSIVIDADE */
+@media only screen and (max-width: 420px){
+    .janelaBlog {
+        width: 100%;
+        height: 475px;
+        margin-left: 0;
+        margin-right: 0;
+    
+    }
+    #inicio-blog p:nth-child(1){
+        font-size: 50px;
+    }
+    .aboutPost p:nth-child(1){
+        font-size: 48px !important;
+    }
+    .aboutPost p:nth-child(2){
+        font-size: 12px !important;
+    }
+
+
+    .blog-image{
+        width: 100%;
+        height: auto;
+    }
+    .blog-title{
+        width: 100%;
+        text-align: -webkit-center;
+    }
+}
+@media only screen and (max-width: 380px){
+    .janelaBlog {
+        width: 100%;
+        height: 475px;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
 }

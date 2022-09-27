@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-g^u!l1*4pyvo_f=&cbtxer4f#4r$@-%su6pggm5l+q)5wju&v9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -88,6 +88,18 @@ DATABASES = {
     'default': dj_database_url.config()
 }'''
 
+
+#Postgresql DATABASE
+'''DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'portfolio_teste',
+        'USER': 'portfolio_teste_user',
+        'PASSWORD': 'adlbg460',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

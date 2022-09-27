@@ -41,4 +41,7 @@ class BlogDetailView(DetailView):
     model = Post
     template_name = 'blogdetail_view.html'
     context_object_name = 'post_individual'
+
+class AboutMeView(TemplateView):
+    template_name = 'sobremim.html'
     

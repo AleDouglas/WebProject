@@ -1,0 +1,16 @@
+#sobre-mim{
+    margin-top: 90px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10% 10px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sobre-mim p{
+    margin-bottom: 35px;
+    text-align: -webkit-center;
+    letter-spacing: 3px;
+    font-size: 18px;
+}
