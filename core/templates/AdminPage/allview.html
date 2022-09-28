@@ -1,0 +1,4 @@
+<h1>Lista de Postagens ( Blog )</h1>
+{% for post in object_list %}
+    <p>{{ post.title }} <a href="{% url 'post_edit' post.pk %}">EDITAR</a> | <a href="{% url 'post_delete' post.pk %}">DELETAR</a></p>
+{% endfor %}

@@ -23,3 +23,4 @@ class ContatoForm(forms.Form):
 
         print('POST -> Email Enviado ao sistema')
         mail.send()
+

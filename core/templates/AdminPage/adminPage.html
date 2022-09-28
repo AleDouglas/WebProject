@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'AdminPage/css/main.css' %}"> <!-- Responsável pela página Home  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'AdminPage/css/navbar.css' %}"> <!-- Responsável pela Barra de Navegação  -->
+
+</head>
+<body>
+    <section id="navbar">
+        <div class="bar">
+            <a href="adminPage">Administração Home</a>
+            <a href="adminPage/allpost">Ver todos os Posts ( Blog )</a>
+            <a href="">Ver todas as atualizações</a>
+            <a href="/">SAIR</a>
+        </div>
+    </section>
+
+    <section id="conteudo">
+
+        <section id="List">
+            <section id="janelaList">
+                <p class="title">Lista de Postagens ( Blog )</p>
+                {% for post in object_list %}
+                    <p class="postConteudo">{{ post.title }} <a href="{% url 'post_edit' post.pk %}">EDITAR</a> | <a href="{% url 'post_delete' post.pk %}">DELETAR</a></p>
+                {% endfor %}
+                <a href="adminPage/allpost">VER MAIS</a>
+            </section>
+            <section id="janelaList">
+                <p class="title">Lista de Usuários</p>
+                {% for userList in userList %}
+                    <p class="postConteudo">{{ userList }}</p>
+                {% endfor %}
+            </section>
+        </section>
+
+
+        <section id="List">
+            <section id="janelaList">
+                <p class="title">Atualizações da página</p>
+                {% for x in updateList %}
+                    <p class="postConteudo"> {{ x.data }} - {{ x.title }}</p>
+                {% endfor %}
+            </section>
+        </section>
+    </section>
+</body>
+</html>

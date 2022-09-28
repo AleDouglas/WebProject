@@ -1,0 +1,25 @@
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 100px; 
+    background-color: black;
+    z-index: 1001;
+    top: 0;
+}
+
+.bar{
+    grid-gap: 50px;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    
+}
+
+.bar a{
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+    letter-spacing: 4px;
+    font-size: 18px;
+}
