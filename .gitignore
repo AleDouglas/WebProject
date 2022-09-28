@@ -10,6 +10,18 @@
 
 __pycache__
 
+settings.py
+
+.migrations
+
+migrations
+
+db.sqlite3
+
+media
+
+urls.py
+
 gitignoreforHEROKU.txt
 
 gitignoreforGITHUB.txt
